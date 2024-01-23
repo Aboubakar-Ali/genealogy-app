@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 
 // Connexion à MongoDB (Remplacez 'votre_uri_mongodb' par votre URI de connexion)
-mongoose.connect('mongodb+srv://aboubakaraliabdoulaziz:2XzIUbYUHyyscjDC@cluster0.tqz1bav.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connecté à MongoDB'))
   .catch(err => console.error('Erreur de connexion à MongoDB', err));
 
