@@ -1,0 +1,16 @@
+.family-tree {
+    margin-top: 20px;
+  }
+  
+  .family-tree ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .family-tree li {
+    margin-bottom: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  

@@ -1,9 +1,15 @@
 const express = require('express');
+const cors = require('cors');
 const mongoose = require('mongoose');
 require('dotenv').config();
 
 
+
 const app = express();
+
+app.use(cors()); 
+
+app.use(express.json());
 
 // Middleware pour parser le JSON
 app.use(express.json());
@@ -18,6 +24,7 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Le serveur fonctionne sur le port ${PORT}`));
 
 const peopleRoutes = require('./routes/people');
+
 
 // Utiliser les routes pour les personnes
 app.use('/people', peopleRoutes);
