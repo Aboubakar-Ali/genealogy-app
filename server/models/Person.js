@@ -1,8 +1,13 @@
 const mongoose = require('mongoose');
 
 const personSchema = new mongoose.Schema({
-  name: { type: String, required: true },
+  lastname: { type: String, required: true },
+  firstname: { type: String, required: true },
+  Adress: { type: String},
   birthDate: Date,
+  Place_of_Birth: { type: String},
+  profession: { type: String},
+  hobbies: { type: String},
   deathDate: Date,
   parents: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Person' }],
   children: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Person' }]
