@@ -10,6 +10,7 @@ const personSchema = new mongoose.Schema({
   hobbies: { type: String},
   deathDate: Date,
   image: { type: String},
+  sexe: { type: String, required: true},
   parents: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Person' }],
   children: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Person' }]
 });
